@@ -35,6 +35,6 @@ steps:
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Pipeline.Workspace)'
-    artifact: '$solution.plugin'
+    artifact: '$(solution).plugin'
     publishLocation: 'pipeline'
 
