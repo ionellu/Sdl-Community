@@ -32,13 +32,9 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'JUnit'
-    testResultsFiles: '**/TEST-*.xml'
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Pipeline.Workspace)'
-    artifact: 'drop'
+    artifact: '$solution.plugin'
     publishLocation: 'pipeline'
 
