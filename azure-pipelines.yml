@@ -12,15 +12,7 @@ variables:
   solution: '**/MultiTermStandAloneTestApp.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  
-  trigger:
-  branches:
-    include:
-    - master
-    - releases/*
-  paths:
-    include:
-    - solution
+ 
 steps:
 - task: NuGetToolInstaller@1
 
