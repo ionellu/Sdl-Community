@@ -3,17 +3,8 @@
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
-# specific path build
-trigger:
-  branches:
-    include:
-    - master
-    - releases/*
-  paths:
-    include:
-    - MultiTermStandAloneTestApp*
-    exclude:
-    - docs/README.md
+
+
 
 pool: mypool
 
@@ -21,7 +12,15 @@ variables:
   solution: '**/MultiTermStandAloneTestApp.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-
+  
+  trigger:
+  branches:
+    include:
+    - master
+    - releases/*
+  paths:
+    include:
+    - solution
 steps:
 - task: NuGetToolInstaller@1
 
