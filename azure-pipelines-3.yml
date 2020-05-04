@@ -3,25 +3,11 @@
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
-trigger:
-  branches:
-    include:
-    - master
-    - releases/*
-    - feature/*
-    exclude:
-    - releases/old*
-    - feature/*-working
-  paths:
-    include:
-    - '*Community*Wpf*Helpers'
-    exclude:
-    - 'docs/*' # same as 'docs/'
 
 pool: mypool
 
 variables:
-  solution: '**/*.sln'
+  solution: '***Community*Wpf*Helpers*/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
