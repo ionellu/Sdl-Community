@@ -14,7 +14,7 @@ trigger:
     - feature/*-working
   paths:
     include:
-    - '*ProjectTerms'
+    - '*Community*Wpf*Helpers'
     exclude:
     - 'docs/*' # same as 'docs/'
 
