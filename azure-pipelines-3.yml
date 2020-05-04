@@ -7,7 +7,7 @@
 pool: mypool
 
 variables:
-  solution: '***Community*Wpf*Helpers*/*.sln'
+  solution: '**Community*Wpf*Helpers*/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
