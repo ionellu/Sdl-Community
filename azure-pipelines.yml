@@ -43,12 +43,10 @@ steps:
     PublishSymbols: false
   continueOnError: true
 
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact'
+- task: PublishPipelineArtifact@1
   inputs:
-    PathtoPublish: '$(build.stagingdirectory)'
-    ArtifactName: 'drop'
-  condition: succeededOrFailed()
+    targetPath: $(System.DefaultWorkingDirectory)/bin/WebApp
+    artifactName: WebApp
 
 
 
