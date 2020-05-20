@@ -11,7 +11,7 @@ pool: mypool
 variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  solution : 'AHK plugin/Sdl.Community.AhkPlugin.sln'
+  solution : 'AHK plugin/Sdl.Community.AhkPlugin/Sdl.Community.AhkPlugin.sln'
 steps:
 - task: NuGetToolInstaller@1
   displayName: 'Use NuGet 4.5.3'
