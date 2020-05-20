@@ -21,7 +21,7 @@ steps:
 - task: NuGetCommand@2
   displayName: 'NuGet restore'
   inputs:
-    restoreSolution: '**/*.sln'
+    restoreSolution: '$(solution)'
     vstsFeed: 'af66e256-9c46-4fba-ad75-09bf110ec1cc'
 
 
