@@ -9,7 +9,7 @@
 pool: mypool
 
 variables:
-  solution: 'Sdl.Community.AhkPlugin.sln'
+  solution: '/AhkPlugin/Sdl.Community.AhkPlugin.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
  
