@@ -6,47 +6,38 @@
 
 
 
-pool: mypool
+pool: Studio-OX
 
 variables:
-  solution: '**/MultiTermStandAloneTestApp.sln'
+  solution: '**/Sdl.Community.AhkPlugin.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
  
 steps:
 - task: NuGetToolInstaller@1
+  displayName: 'Use NuGet 4.5.3'
+  inputs:
+    versionSpec: 4.5.3
 
 - task: NuGetCommand@2
+  displayName: 'NuGet restore'
   inputs:
-    restoreSolution: '$(solution)'
+    restoreSolution: '$(Parameters.solution)'
+    vstsFeed: 'af66e256-9c46-4fba-ad75-09bf110ec1cc'
+
 
 - task: VSBuild@1
+  displayName: 'Build solution '
   inputs:
-    solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
-- task: VSTest@2
-  displayName: 'Test Assemblies'
-  inputs:
-    testAssemblyVer2: |
-     **\$(BuildConfiguration)\*test*.dll
-     !**\obj\**
+    solution: '$(Parameters.solution)'
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
-    
-- task: PublishSymbols@2
-  displayName: 'Publish symbols path'
-  inputs:
-    SearchPattern: '**\bin\**\*.pdb'
-    PublishSymbols: false
-  continueOnError: true
+    maximumCpuCount: true
 
-- task: PublishPipelineArtifact@1
-  inputs:
-    targetPath: $(System.DefaultWorkingDirectory)/bin/WebApp
-    artifactName: WebApp
+  
+
+
+
 
 
 
