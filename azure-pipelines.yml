@@ -6,7 +6,7 @@
 
 
 
-pool: Studio-OX
+pool: Itdevops
 
 variables:
   solution: 'Sdl.Community.AhkPlugin.sln'
