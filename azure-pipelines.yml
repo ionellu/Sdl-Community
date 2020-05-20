@@ -9,7 +9,7 @@
 pool: Studio-OX
 
 variables:
-  solution: '**/Sdl.Community.AhkPlugin.sln'
+  solution: 'Sdl.Community.AhkPlugin.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
  
