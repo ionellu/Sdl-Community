@@ -9,10 +9,9 @@
 pool: mypool
 
 variables:
-  solution: '/AhkPlugin/Sdl.Community.AhkPlugin.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
- 
+  solution : 'AhkPlugin/Sdl.Community.AhkPlugin.sln'
 steps:
 - task: NuGetToolInstaller@1
   displayName: 'Use NuGet 4.5.3'
@@ -22,14 +21,14 @@ steps:
 - task: NuGetCommand@2
   displayName: 'NuGet restore'
   inputs:
-    restoreSolution: '$(Parameters.solution)'
+    restoreSolution: '$(solution)'
     vstsFeed: 'af66e256-9c46-4fba-ad75-09bf110ec1cc'
 
 
 - task: VSBuild@1
   displayName: 'Build solution '
   inputs:
-    solution: '$(Parameters.solution)'
+    solution: '$(solution)'
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
     maximumCpuCount: true
