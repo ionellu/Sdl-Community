@@ -6,7 +6,7 @@
 
 
 
-pool: Itdevops
+pool: Azure Pipelines
 
 variables:
   solution: 'Sdl.Community.AhkPlugin.sln'
