@@ -20,7 +20,7 @@ steps:
 - task: NuGetCommand@2
   displayName: 'NuGet restore'
   inputs:
-    restoreSolution: '$(Parameters.solution)'
+    restoreSolution: '$(solution)'
     vstsFeed: 'af66e256-9c46-4fba-ad75-09bf110ec1cc'
 
 - task: VSBuild@1
