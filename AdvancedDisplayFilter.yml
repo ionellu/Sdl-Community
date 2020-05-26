@@ -8,8 +8,8 @@ trigger:
     include:
      - master
   paths:
-       include:
-        - Sdl-Community/AdvancedDisplayFilter/*
+    include:
+     - Sdl-Community/AdvancedDisplayFilter/*
 
 pool: Studio-OX
 
