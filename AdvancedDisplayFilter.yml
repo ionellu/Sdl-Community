@@ -4,10 +4,10 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 trigger:
-      branches:
-       include:
-         - master
-      paths:
+  branches:
+    include:
+     - master
+  paths:
        include:
         - Sdl-Community/AdvancedDisplayFilter/*
 
