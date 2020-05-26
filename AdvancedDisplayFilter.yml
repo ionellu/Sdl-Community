@@ -25,4 +25,4 @@ steps:
     inputs:
      ArtifactName: 'AdvancedDisplayFilter.Master'
      publishLocation: FilePath
-     TargetPath: '\\ionellu\Sdl-Community\Build\'
+     TargetPath: '\\Sdl-Community\Build\'
