@@ -25,4 +25,4 @@ steps:
     inputs:
      ArtifactName: 'AdvancedDisplayFilter.Master'
      publishLocation: FilePath
-     TargetPath: '\\Sdl-Community\Build\'
+     TargetPath: '$(Agent.BuildDirectory)'
