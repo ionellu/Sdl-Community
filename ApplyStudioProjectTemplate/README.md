@@ -3,6 +3,9 @@
 
 
 
+
+
+
 This plug-in allows you to apply settings from a template (.sdltpl) or project (.sdlproj) to one or more projects in SDL Trados Studio. The following settings can be applied:
 - Translation Memory and Automated Translation*
 - Translation Memory
