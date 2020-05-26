@@ -6,12 +6,7 @@
 
 
 trigger:
-  branches:
-    include:
     - master
-  paths:
-    include:
-    - Sdl-Community/ApplyStudioProjectTemplate/*
 
 pool: Studio-OX
 
