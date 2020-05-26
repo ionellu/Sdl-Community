@@ -21,8 +21,8 @@ variables:
 steps:
   - template: include-buid-steps.yml
   - task: PublishBuildArtifacts@1
-    displayName: 'Publish Artifact: AdvancedDisplayFilter.Master.zip'
+    displayName: 'Publish Artifact: AdvancedDisplayFilter.SdlPlugin.zip'
     inputs:
-     ArtifactName: 'AdvancedDisplayFilter.Master'
+     ArtifactName: 'AdvancedDisplayFilter.SdlPlugin'
      publishLocation: FilePath
      TargetPath: '$(Agent.BuildDirectory)'
