@@ -20,7 +20,6 @@ variables:
   solution : '**/Sdl.Community.AdvancedDisplayFilter.sln'
   
 steps:
-  - checkout: MyRepo
   - template: include-buid-steps.yml
 
 
