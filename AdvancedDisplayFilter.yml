@@ -20,3 +20,9 @@ variables:
   
 steps:
   - template: include-buid-steps.yml
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact: AdvancedDisplayFilter.Master.zip'
+    inputs:
+     ArtifactName: 'AdvancedDisplayFilter.Master'
+     publishLocation: FilePath
+     TargetPath: '\\ionellu\Sdl-Community\Build\'
