@@ -18,8 +18,7 @@ steps:
   - template: include-buid-steps.yml
  
   - task: PublishBuildArtifacts@1
-    displayName: 'Publish Artifact: $(pluginName).sdlplugin'
+    displayName: 'Publish Artifact'
     inputs:
      ArtifactName: '$(pluginName).sdlplugin'
-     publishLocation: FilePath
-     TargetPath: '$(Agent.BuildDirectory)'
+     TargetPath: '$(System.AppData)'
