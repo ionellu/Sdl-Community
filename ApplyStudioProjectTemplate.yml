@@ -17,16 +17,11 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   solution : '**/Sdl.Community.ApplyStudioProjectTemplate.sln'
+  artifactName:  'ApplyStudioProjectTemplate.sdlplugin'
+  pluginName:  'ApplyStudioProjectTemplate'
   
 steps:
   - template: include-buid-steps.yml
-  - task: PublishBuildArtifacts@1
-    displayName: 'Publish Artifact: ApplyStudioProjectTemplate.SdlPlugin.zip'
-    inputs:
-     ArtifactName: 'ApplyStudioProjectTemplate.SdlPlugin'
-     publishLocation: FilePath
-     TargetPath: '$(Agent.BuildDirectory)'
-
   
 
 
