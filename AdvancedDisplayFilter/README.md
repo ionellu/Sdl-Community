@@ -5,12 +5,7 @@ dfdfdfsfssdsd
 
 d
 d
-sdsdssdsdxcxc
-xcxdfdfdfdf
-s
-ds
-s
-s
+sdsdssdsdxcx
 s
 sfjldslfnkldsnlsdgkds,
 fg
