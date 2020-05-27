@@ -13,12 +13,7 @@ variables:
   buildConfiguration: 'Release'
   solution : '**/Sdl.Community.AdvancedDisplayFilter.sln'
   pluginName: 'AdvancedDisplayFilter'
+  artifactName: 'AdvancedDisplayFilter.sdlplugin'
   
 steps:
   - template: include-buid-steps.yml
- 
-  - task: PublishBuildArtifacts@1
-    displayName: 'Publish Artifact'
-    inputs:
-     artifactName: drop
-     pathToPublish: $(pluginName)\bin\Release\Sdl.Community.$(pluginName).sdlplugin'
