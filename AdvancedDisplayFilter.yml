@@ -10,6 +10,8 @@ trigger:
   paths:
     include:
      - Sdl-Community/AdvancedDisplayFilter/*
+    exclude:
+      - other 
 
 pool: Studio-OX
 
