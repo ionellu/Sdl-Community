@@ -16,16 +16,12 @@ pool: Studio-OX
 variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  solution : '**/Sdl.Community.TargetWordCount.sln'
+  solution: '**/Sdl.Community.TargetWordCount.sln'
+  artifactName: 'Sdl.Community.TargetWordCount.sdlplugin'
+  pluginName:  'TargetWordCount'
   
 steps:
   - template: include-buid-steps.yml
-  - task: PublishBuildArtifacts@1
-    displayName: 'Publish Artifact: TargetWordCount.SdlPlugin.zip'
-    inputs:
-     ArtifactName: 'TargetWordCount.SdlPlugin'
-     publishLocation: FilePath
-     TargetPath: '$(Agent.BuildDirectory)'
 
   
 
