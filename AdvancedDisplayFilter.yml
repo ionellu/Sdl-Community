@@ -20,5 +20,5 @@ steps:
   - task: PublishBuildArtifacts@1
     displayName: 'Publish Artifact'
     inputs:
-     ArtifactName: '$(pluginName).sdlplugin'
-     TargetPath: '$(System.AppData)\AdvancedDisplayFilter\bin\Release\Sdl.Community.AdvancedDisplayFilter.sdlplugin'
+     artifactName: '$(pluginName).sdlplugin'
+     pathToPublish: '$(System.AppData)\AdvancedDisplayFilter\bin\Release\Sdl.Community.AdvancedDisplayFilter.sdlplugin'
