@@ -21,4 +21,4 @@ steps:
     displayName: 'Publish Artifact'
     inputs:
      ArtifactName: '$(pluginName).sdlplugin'
-     TargetPath: 'AdvancedDisplayFilter\bin\Release\Sdl.Community.AdvancedDisplayFilter.sdlplugin'
+     TargetPath: '$(System.AppData)\AdvancedDisplayFilter\bin\Release\Sdl.Community.AdvancedDisplayFilter.sdlplugin'
