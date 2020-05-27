@@ -9,9 +9,7 @@ trigger:
      - master
   paths:
     include:
-     - Sdl-Community/AdvancedDisplayFilter/*
-    exclude:
-      - other 
+     - AdvancedDisplayFilter/*
 
 pool: Studio-OX
 
