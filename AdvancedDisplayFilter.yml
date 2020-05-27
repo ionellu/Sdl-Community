@@ -21,4 +21,4 @@ steps:
     displayName: 'Publish Artifact'
     inputs:
      ArtifactName: '$(pluginName).sdlplugin'
-     TargetPath: '$(System.AppData)'
+     TargetPath: '$(System.AppData)\Sdl\Sdl Trados Studio\15\Plugins\$(pluginName).sdlplugin'
