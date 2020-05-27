@@ -8,7 +8,7 @@ trigger:
      - master
   paths:
     include:
-     - Sdl-Community/TargetWordCount/*
+     - ionellu/Sdl-Community/TargetWordCount/*
 
 pool: Studio-OX
 
