@@ -9,20 +9,28 @@ trigger:
      - master
   paths:
     include:
-     - Sdl-Community/AdvancedDisplayFilter/*
+     - ionellu/Sdl-Community/TargetWordCount/*
 
 pool: Studio-OX
 
 variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  solution : '**/Sdl.Community.AdvancedDisplayFilter.sln'
+  solution : '**/Sdl.Community.TargetWordCount.sln'
   
 steps:
   - template: include-buid-steps.yml
   - task: PublishBuildArtifacts@1
-    displayName: 'Publish Artifact: AdvancedDisplayFilter.SdlPlugin.zip'
+    displayName: 'Publish Artifact: TargetWordCount.SdlPlugin.zip'
     inputs:
-     ArtifactName: 'AdvancedDisplayFilter.SdlPlugin'
+     ArtifactName: 'TargetWordCount.SdlPlugin'
      publishLocation: FilePath
      TargetPath: '$(Agent.BuildDirectory)'
+
+  
+
+
+
+
+
+

@@ -7,22 +7,27 @@ trigger:
   branches:
     include:
      - master
-  paths:
-    include:
-     - Sdl-Community/AdvancedDisplayFilter/*
 
 pool: Studio-OX
 
 variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  solution : '**/Sdl.Community.AdvancedDisplayFilter.sln'
+  solution : '**/Sdl.Community.ApplyStudioProjectTemplate.sln'
   
 steps:
   - template: include-buid-steps.yml
   - task: PublishBuildArtifacts@1
-    displayName: 'Publish Artifact: AdvancedDisplayFilter.SdlPlugin.zip'
+    displayName: 'Publish Artifact: ApplyStudioProjectTemplate.SdlPlugin.zip'
     inputs:
-     ArtifactName: 'AdvancedDisplayFilter.SdlPlugin'
+     ArtifactName: 'ApplyStudioProjectTemplate.SdlPlugin'
      publishLocation: FilePath
      TargetPath: '$(Agent.BuildDirectory)'
+
+  
+
+
+
+
+
+

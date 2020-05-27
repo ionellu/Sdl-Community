@@ -3,15 +3,16 @@
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
+
 trigger:
   branches:
     include:
-     - master
+      - master
   paths:
     include:
-     - Sdl-Community/AdvancedDisplayFilter/*
+      - Sdl-Community/AdvancedDisplayFilter/*
 
-pool: Studio-OX
+pool: mypool
 
 variables:
   buildPlatform: 'Any CPU'
@@ -19,10 +20,12 @@ variables:
   solution : '**/Sdl.Community.AdvancedDisplayFilter.sln'
   
 steps:
-  - template: include-buid-steps.yml
-  - task: PublishBuildArtifacts@1
-    displayName: 'Publish Artifact: AdvancedDisplayFilter.SdlPlugin.zip'
-    inputs:
-     ArtifactName: 'AdvancedDisplayFilter.SdlPlugin'
-     publishLocation: FilePath
-     TargetPath: '$(Agent.BuildDirectory)'
+  - template: include-buid-steps.yml  # Template reference
+
+  
+
+
+
+
+
+

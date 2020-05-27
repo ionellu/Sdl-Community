@@ -6,10 +6,10 @@
 trigger:
   branches:
     include:
-     - master
+      - master
   paths:
     include:
-     - Sdl-Community/AdvancedDisplayFilter/*
+      - Sdl-Community/AdvancedDisplayFilter/*
 
 pool: Studio-OX
 
@@ -20,9 +20,3 @@ variables:
   
 steps:
   - template: include-buid-steps.yml
-  - task: PublishBuildArtifacts@1
-    displayName: 'Publish Artifact: AdvancedDisplayFilter.SdlPlugin.zip'
-    inputs:
-     ArtifactName: 'AdvancedDisplayFilter.SdlPlugin'
-     publishLocation: FilePath
-     TargetPath: '$(Agent.BuildDirectory)'
