@@ -25,7 +25,12 @@ steps:
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
     maximumCpuCount: true
-
+		
+- task: PublishBuildArtifacts@1
+   displayName: 'Publish Artifact'
+   inputs:
+    artifactName: drop
+    pathToPublish: $(pluginName)\bin\$(buildConfiguration)\$(artifactName).sdlplugin'
   
 
 
