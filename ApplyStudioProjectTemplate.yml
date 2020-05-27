@@ -9,7 +9,7 @@ trigger:
      - master
   paths:
     include:
-     - Sdl-Community/ApplyStudioProjectTemplate/*
+     - Sdl-Community/*
 
 pool: Studio-OX
 
