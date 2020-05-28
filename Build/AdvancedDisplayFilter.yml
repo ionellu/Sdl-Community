@@ -14,6 +14,6 @@ variables:
   solution : '**/Sdl.Community.AdvancedDisplayFilter.sln'
   pluginName: 'AdvancedDisplayFilter'
   artifactName: 'AdvancedDisplayFilter.sdlplugin'
-  
+
 steps:
   - template: include-buid-steps.yml
